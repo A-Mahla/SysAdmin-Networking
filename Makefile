@@ -1,7 +1,5 @@
-NAME := badass
+.PHONY:	all
 
-all:	$(NAME)
-
-$(NAME) :
+all :
 		docker build -t router:latest -f Dockerfile.router .
 		docker build -t host:latest -f Dockerfile.host .
