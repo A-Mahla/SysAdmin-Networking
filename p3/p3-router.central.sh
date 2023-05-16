@@ -1,13 +1,13 @@
 # view ../p2/ for explanation
-#ip link add br0 type bridge
-#ip link set dev br0 up
+#/sbin/ip link add br0 type bridge
+#/sbin/ip link set dev br0 up
 
 # Unicast
-#ip link add name vxlan10 type vxlan id 10 dstport 4789
+#/sbin/ip link add name vxlan10 type vxlan id 10 dstport 4789
 # Multicast
-#ip link add name vxlan10 type vxlan id 10 dev eth0 group 239.1.1.1 dstport 4789
+#/sbin/ip link add name vxlan10 type vxlan id 10 dev eth0 group 239.1.1.1 dstport 4789
 
-#ip link set dev vxlan10 up
+#/sbin/ip link set dev vxlan10 up
 #brctl addif br0 eth1
 #brctl addif br0 vxlan10
 
@@ -19,13 +19,13 @@ conf t
 	!
 
 	interface eth1
-		/sbin/ip address 10.1.1.6/30
-		/sbin/ip ospf area 0
+		ip address 10.1.1.6/30
+		ip ospf area 0
 	!
 
 	interface lo
-		/sbin/ip address 1.1.1.3/32
-		/sbin/ip ospf area 0
+		ip address 1.1.1.3/32
+		ip ospf area 0
 	!
 
 	router bgp 1

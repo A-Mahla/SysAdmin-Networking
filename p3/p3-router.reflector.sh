@@ -7,19 +7,19 @@ conf t
 	!
 
 	interface eth0
-		/sbin/ip address 10.1.1.1/30
+		ip address 10.1.1.1/30
 	!
 
 	interface eth1
-		/sbin/ip address 10.1.1.5/30
+		ip address 10.1.1.5/30
 	!
 
 	interface eth2
-		/sbin/ip address 10.1.1.9/30
+		ip address 10.1.1.9/30
 	!
 
 	interface lo
-		/sbin/ip address 1.1.1.1/32
+		ip address 1.1.1.1/32
 	!
 
 	router bgp 1
