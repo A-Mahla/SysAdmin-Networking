@@ -4,10 +4,10 @@
 ip link add br0 type bridge
 # up the device created (br0)
 ip link set dev br0 up
-# add host ip to routing table of the router
+# add  ip to routing table of the router
 ip addr add 10.1.1.2/30 dev eth0
 
-# set Vxlan dev and encapsulation
+# set Vxlan and encapsulation
 # Unicast
 ip link add name vxlan10 type vxlan id 10 dev eth0 remote 10.1.1.1 local 10.1.1.2 dstport 4789
 
