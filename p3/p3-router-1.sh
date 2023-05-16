@@ -2,7 +2,7 @@
 vtysh << EOF
 conf t
 
-	hostname router_amahla-1
+	hostname _amahla-1
 	no ipv6 forwarding
 	!
 

@@ -10,23 +10,23 @@
 #/sbin/ip link add name vxlan10 type vxlan id 10 dev eth0 group 239.1.1.1 dstport 4789
 
 /sbin/ip link set dev vxlan10 up
-brctl addif br0 eth0
+brctl addif br0 eth1
 brctl addif br0 vxlan10
 
 vtysh << EOF
 conf t
 
-	hostname router_amahla-4
+	hostname _amahla-2
 	no ipv6 forwarding
 	!
 
-	interface eth2
-		ip address 10.1.1.10/30
+	interface eth0
+		ip address 10.1.1.2/30
 		ip ospf area 0
 	!
 
 	interface lo
-		ip address 1.1.1.4/32
+		ip address 1.1.1.2/32
 		ip ospf area 0
 	!
 
