@@ -11,7 +11,8 @@
 #brctl addif br0 eth1
 #brctl addif br0 vxlan10
 
-vtysh < "conf t
+vtysh << EOF
+conf t
 
 	hostname router_amahla-3
 	no ipv6 forwarding
@@ -36,6 +37,7 @@ vtysh < "conf t
 		exit-address-family
 	!
 	router ospf
-!"
+!
+EOF
 
 

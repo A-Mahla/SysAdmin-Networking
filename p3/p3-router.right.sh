@@ -13,7 +13,8 @@ ip link set dev vxlan10 up
 brctl addif br0 eth0
 brctl addif br0 vxlan10
 
-vtysh < "conf t
+vtysh << EOF
+conf t
 
 	hostname router_amahla-4
 	no ipv6 forwarding
@@ -39,6 +40,7 @@ vtysh < "conf t
 		exit-address-family
 	!
 	router ospf
-!"
+!
+EOF
 
 

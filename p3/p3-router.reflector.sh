@@ -1,5 +1,6 @@
 
-vtysh < "conf t
+vtysh << EOF
+conf t
 
 	hostname router_amahla-1
 	no ipv6 forwarding
@@ -36,6 +37,7 @@ vtysh < "conf t
 		network 0.0.0.0/0 area 0
 	!
 	line vty
-!"
+!
+EOF
 
 
