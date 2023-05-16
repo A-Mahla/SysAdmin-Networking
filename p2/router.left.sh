@@ -12,7 +12,7 @@ ip addr add 10.1.1.1/30 dev eth0
 ip link add name vxlan10 type vxlan id 10 dev eth0 remote 10.1.1.2 local 10.1.1.1 dstport 4789
 
 # Multicast
-ip link add name vxlan10 type vxlan id 10 dev eth0 group 239.1.1.1 dstport 4789
+#ip link add name vxlan10 type vxlan id 10 dev eth0 group 239.1.1.1 dstport 4789
 
 # add router ip to vxlan routing table (after encapsulation)
 ip addr add 20.1.1.1/30 dev vxlan10
