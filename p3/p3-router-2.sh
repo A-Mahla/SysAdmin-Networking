@@ -16,7 +16,7 @@ brctl addif br0 vxlan10
 vtysh << EOF
 conf t
 
-	hostname _amahla-2
+	hostname amahla-2
 	no ipv6 forwarding
 	!
 
